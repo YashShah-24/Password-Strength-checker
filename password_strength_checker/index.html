@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid-background">
+    <div class="browser-window">
+      <div class="browser-header">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="browser-content">
+        <div class="speech-bubble">Check your password strength here!</div>
+
+        <div style="position: relative; width: 100%; margin-bottom: 16px;">
+          <input 
+            type="password" 
+            id="password" 
+            placeholder="Enter your password" 
+            aria-label="Enter your password"
+          />
+          <button 
+            type="button" 
+            onclick="togglePasswordVisibility()" 
+            style="
+              position: absolute;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-size: 14px;
+              color: #2563eb;
+              font-weight: bold;
+            ">
+            Show
+          </button>
+        </div>
+
+        <button onclick="checkStrength()">Check Strength</button>
+        <p id="result" role="status"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
